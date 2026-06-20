@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-darkBg text-neutral-300;
+  }
+
+  /* Custom Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-darkBg-darker;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-800 rounded-full hover:bg-primary;
+  }
+}
+
+/* Custom visual utilities to replicate special legacy features */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Custom highlight keyframes for classes timetable */
+.timetable-meta-highlight {
+  @apply transition-all duration-300 scale-105 shadow-lg border-2 border-primary bg-primary/20 text-white z-10;
+}
